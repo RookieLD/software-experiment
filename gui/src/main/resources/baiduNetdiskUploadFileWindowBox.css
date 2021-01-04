@@ -1,0 +1,17 @@
+.topBigButton {
+    -fx-pref-height: 26px;
+    -fx-pref-width: 60px;
+    -fx-font-size: 16px;
+}
+
+.labelStyle {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 120px;
+    -fx-font-size: 14px;
+}
+
+.textFieldStyle {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+}
+

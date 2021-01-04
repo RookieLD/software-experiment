@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="compressWindow.css"
+      fx:controller="com.github.coerx.qarchiver.gui.controller.CompressWindowController">
+    <HBox>
+        <Button text="取消" fx:id="cancelButton" styleClass="buttonStyle"></Button>
+        <Pane>
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"></Priority>
+            </HBox.hgrow>
+        </Pane>
+        <Button text="创建" fx:id="createButton" styleClass="buttonStyle"></Button>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox styleClass="hboxStyle">
+        <Label text="文件名:" alignment="BOTTOM_LEFT" styleClass="buttonStyle"></Label>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox styleClass="hboxStyle">
+        <TextField fx:id="textFieldForFilename"
+                   style="-fx-min-height: 32px;-fx-pref-width: 330px;-fx-font-size: 16"></TextField>
+        <!--<Label text=".mytar.myz"
+               style="-fx-pref-height: 26px;-fx-pref-width: 160px;-fx-font-size: 18px;-fx-padding: 0 0 0 6"></Label>-->
+        <ChoiceBox fx:id="fileTypeChoiceBox"
+                   style="-fx-min-height: 32px;-fx-pref-width: 160px;-fx-font-size: 14px;">
+            <String fx:value=".mytar.myz"></String>
+            <String fx:value=".mytar.myz.aes"></String>
+            <HBox.margin>
+                <Insets>
+                    <left>4</left>
+                </Insets>
+            </HBox.margin>
+        </ChoiceBox>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox styleClass="hboxStyle">
+        <Label text="存放位置:" alignment="BOTTOM_LEFT" styleClass="buttonStyle"></Label>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Button text="选择位置" fx:id="choosePathButton"
+                style="-fx-pref-height: 26px;-fx-pref-width: 80px;-fx-font-size: 14px;">
+            <HBox.margin>
+                <Insets>
+                    <right>4</right>
+                </Insets>
+            </HBox.margin>
+        </Button>
+        <TextField fx:id="pathLabel" editable="false" alignment="BOTTOM_LEFT"
+                   style="-fx-min-height: 26px;-fx-pref-width: 360px;-fx-font-size: 14px;">
+        </TextField>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <ToggleButton text="其它选项" fx:id="otherOpinion"
+                      style="-fx-pref-height: 26px;-fx-pref-width: 80px;-fx-font-size: 14px;"></ToggleButton>
+        <VBox.margin>
+            <Insets>
+                <top>8</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <CheckBox text="检查生成的压缩文档" fx:id="checkGeneratedFileCheckBox"></CheckBox>
+        <VBox.margin>
+            <Insets>
+                <top>20</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Label text="密码:" alignment="BASELINE_LEFT" styleClass="buttonStyle"></Label>
+        <VBox.margin>
+            <Insets>
+                <top>16</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+    <HBox>
+        <PasswordField fx:id="textFieldForPassword"  disable="true" style="-fx-pref-width: 492px;-fx-font-size: 16"></PasswordField>
+        <VBox.margin>
+            <Insets>
+                <top>6</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+    <HBox>
+        <CheckBox fx:id="cronTaskCheckBox" text="创建定时任务,输入cron格式时间表达式" onAction="#cronCheckBoxOnAction"></CheckBox>
+        <VBox.margin>
+            <Insets>
+                <top>10</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+    <HBox>
+        <TextField fx:id="cronExpression" disable="true" style="-fx-pref-width: 492px;-fx-font-size: 16"></TextField>
+        <VBox.margin>
+            <Insets>
+                <top>6</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+</VBox>

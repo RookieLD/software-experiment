@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="decompressBox.css"
+      fx:controller="com.github.coerx.qarchiver.gui.controller.DeCompressBoxController">
+    <HBox>
+        <Button fx:id="cancelButton" text="取消" styleClass="cancelAndConfirmButton"></Button>
+        <Pane>
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+        </Pane>
+        <Button fx:id="decompressButton" text="解压" styleClass="cancelAndConfirmButton"></Button>
+        <VBox.margin>
+            <Insets>
+                <left>4</left>
+                <right>4</right>
+                <top>4</top>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+    <HBox>
+        <Button fx:id="chooseSouceFileButton" text="选择压缩文件" styleClass="cancelAndConfirmButton"
+                style="-fx-pref-width: 105px;-fx-font-size: 14px"/>
+        <TextField fx:id="sourfilePathTextField" editable="false" styleClass="sourceFilePathTextField">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+            <HBox.margin>
+                <Insets>
+                    <left>4</left>
+                    <right>4</right>
+                </Insets>
+            </HBox.margin>
+        </TextField>
+        <VBox.margin>
+            <Insets>
+                <left>4</left>
+                <right>4</right>
+                <top>20</top>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Button fx:id="chooseTargetDirButton" text="选择解压目录" styleClass="cancelAndConfirmButton"
+                style="-fx-pref-width: 105px;-fx-font-size: 14px"/>
+        <TextField fx:id="targetDirPathTextField" editable="false" styleClass="sourceFilePathTextField">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+            <HBox.margin>
+                <Insets>
+                    <left>4</left>
+                    <right>4</right>
+                </Insets>
+            </HBox.margin>
+        </TextField>
+        <VBox.margin>
+            <Insets>
+                <left>4</left>
+                <right>4</right>
+                <top>10</top>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Label text="密码:" alignment="BOTTOM_CENTER"
+               style="-fx-pref-width: 105px;-fx-font-size: 16px">
+        </Label>
+        <PasswordField fx:id="passwordField" styleClass="sourceFilePathTextField">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+            <HBox.margin>
+                <Insets>
+                    <left>4</left>
+                </Insets>
+            </HBox.margin>
+        </PasswordField>
+
+        <VBox.margin>
+            <Insets>
+                <left>4</left>
+                <right>4</right>
+                <top>20</top>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+</VBox>
+
+

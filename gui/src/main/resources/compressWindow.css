@@ -1,0 +1,11 @@
+.buttonStyle {
+    -fx-pref-height: 26px;
+    -fx-pref-width: 80px;
+    -fx-font-size: 16px;
+}
+
+.hboxStyle {
+    -fx-pref-height: 26px;
+    -fx-min-height: 26px;
+    -fx-max-height: 26px;
+}

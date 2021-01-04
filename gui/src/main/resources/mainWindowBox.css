@@ -1,0 +1,37 @@
+.addFileAndConfirmButtonHbox {
+
+}
+
+.addFileAndConfirmButton {
+    -fx-pref-height: 26px;
+    -fx-pref-width: 80px;
+    -fx-font-size: 14px;
+}
+
+.addDirButton {
+    -fx-pref-height: 26px;
+    -fx-pref-width: 90px;
+    -fx-font-size: 14px;
+}
+
+.filePathTextFiled {
+    -fx-font-size: 14px;
+}
+
+.fileNameColumn {
+    /*-fx-pref-width: 670px;*/
+    -fx-font-size: 16px;
+}
+
+.fileTypeAndSizeColumn {
+   /* -fx-pref-width: 60px;*/
+}
+
+.loginStatusStyle {
+    -fx-min-width: 200px;
+    -fx-max-width: 9999;
+    -fx-max-height: 30px;
+    -fx-border-color: #d2d2d2;
+    -fx-border-width: 0 0 1px 1px;
+    -fx-font-size: 14px;
+}

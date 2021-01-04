@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="baiduNetdiskUploadFileWindowBox.css"
+      fx:controller="com.github.coerx.qarchiver.gui.controller.BaiduNetdiskUploadFileWindowBoxController">
+    <HBox>
+        <Button fx:id="cancelButton" text="取消" styleClass="topBigButton"></Button>
+        <Pane>
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+        </Pane>
+        <Button fx:id="uploadButton" text="上传" styleClass="topBigButton"></Button>
+        <VBox.margin>
+            <Insets>
+                <left>4</left>
+                <right>4</right>
+                <top>4</top>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Label text="百度云的路径:" alignment="BASELINE_LEFT" styleClass="labelStyle"></Label>
+        <VBox.margin>
+            <Insets>
+                <top>12</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <TextField editable="false" text="/我的应用数据/qarchiver" styleClass="textFieldStyle">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+        </TextField>
+
+        <VBox.margin>
+            <Insets>
+                <top>4</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+
+    <HBox>
+        <Button fx:id="chooseFile" text="选择文件" styleClass="labelStyle"></Button>
+        <TextField fx:id="chooseFileTextField" editable="false" styleClass="textFieldStyle">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+            <HBox.margin>
+                <Insets>
+                    <left>4</left>
+                    <right>4</right>
+                </Insets>
+            </HBox.margin>
+        </TextField>
+        <VBox.margin>
+            <Insets>
+                <top>14</top>
+                <right>4</right>
+                <left>4</left>
+            </Insets>
+        </VBox.margin>
+    </HBox>
+</VBox>

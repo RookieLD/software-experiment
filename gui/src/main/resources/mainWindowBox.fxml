@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="mainWindowBox.css"
+      fx:controller="com.github.coerx.qarchiver.gui.controller.MainWindowBoxController">
+    <HBox>
+        <MenuBar fx:id="menubar"
+                 style="-fx-pref-width:600;-fx-max-height: 30px;-fx-border-color: #d2d2d2;-fx-border-width: 0 0 1px 0">
+            <!--<ClickableMenu fx:id="compressMenu" text="新建压缩文件"/>
+            <ClickableMenu fx:id="decompressMenu" text="解压文件"/>
+            <ClickableMenu fx:id="baiduwangpanMenu" text="登录百度网盘"/>-->
+        </MenuBar>
+        <Label fx:id="loginStatus" text="百度网盘未登录" styleClass="loginStatusStyle" alignment="BASELINE_CENTER">
+            <HBox.hgrow>
+                <Priority fx:value="ALWAYS"/>
+            </HBox.hgrow>
+        </Label>
+    </HBox>
+    <VBox>
+        <HBox>
+            <Button fx:id="addFileButton" text="添加文件" disable="true" styleClass="addFileAndConfirmButton">
+                <HBox.margin>
+                    <Insets>
+                        <left>4</left>
+                    </Insets>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="addDirButton" text="添加文件夹" disable="true" styleClass="addDirButton">
+                <HBox.margin>
+                    <Insets>
+                        <left>6</left>
+                    </Insets>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="startCompressButton" text="开始压缩" disable="true" styleClass="addFileAndConfirmButton">
+                <HBox.margin>
+                    <Insets>
+                        <left>6</left>
+                    </Insets>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="createCronTaskButton" text="创建定时任务" disable="true" style="-fx-pref-width: 110px" styleClass="addFileAndConfirmButton">
+                <HBox.margin>
+                    <Insets>
+                        <left>6</left>
+                        <right>6</right>
+                    </Insets>
+                </HBox.margin>
+            </Button>
+            <TextField fx:id="targetFilePathTextField" editable="false" disable="true" styleClass="filePathTextFiled">
+                <HBox.hgrow>
+                    <Priority fx:value="ALWAYS"/>
+                </HBox.hgrow>
+                <HBox.margin>
+                    <Insets>
+                        <right>4</right>
+                    </Insets>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets>
+                    <top>4</top>
+                    <bottom>4</bottom>
+                </Insets>
+            </VBox.margin>
+        </HBox>
+        <TableView fx:id="sourceFilesTable" disable="true">
+            <columns>
+                <TableColumn fx:id="filenameColumn" text="文件名" styleClass="fileNameColumn">
+                </TableColumn>
+                <TableColumn fx:id="filesizeColumn" text="文件大小" styleClass="fileTypeAndSizeColumn">
+                </TableColumn>
+                <TableColumn fx:id="filetypeColumn" text="文件类型" styleClass="fileTypeAndSizeColumn">
+                </TableColumn>
+            </columns>
+            <placeholder>
+                <Label text="请添加要被压缩的文件和文件夹"></Label>
+            </placeholder>
+            <VBox.vgrow>
+                <Priority fx:value="ALWAYS"></Priority>
+            </VBox.vgrow>
+        </TableView>
+    </VBox>
+</VBox>

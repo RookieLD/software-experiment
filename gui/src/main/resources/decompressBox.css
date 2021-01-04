@@ -1,0 +1,9 @@
+.cancelAndConfirmButton {
+    -fx-pref-height: 26px;
+    -fx-pref-width: 60px;
+    -fx-font-size: 16px;
+}
+
+.sourceFilePathTextField {
+    -fx-font-size: 14px;
+}
